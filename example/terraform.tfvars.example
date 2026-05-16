@@ -1,0 +1,13 @@
+# SSH credentials for bare metal nodes
+ssh_user             = "ubuntu"
+ssh_private_key_path = "~/.ssh/id_rsa"
+
+# Kubernetes configuration
+kubernetes_version = "1.31.0"
+pod_cidr           = "10.200.0.0/16"
+service_cidr       = "10.32.0.0/24"
+
+# Addons
+enable_traefik = true
+enable_kyverno = true
+enable_trivy   = true

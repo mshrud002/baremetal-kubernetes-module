@@ -1,0 +1,27 @@
+controllers = [
+  { hostname = "controller-0", ip = "10.0.0.10" },
+  { hostname = "controller-1", ip = "10.0.0.11" },
+  { hostname = "controller-2", ip = "10.0.0.12" },
+]
+
+workers = [
+  { hostname = "worker-0", ip = "10.0.0.20" },
+  { hostname = "worker-1", ip = "10.0.0.21" },
+  { hostname = "worker-2", ip = "10.0.0.22" },
+]
+
+ssh_user              = "ubuntu"
+ssh_private_key_path  = "~/.ssh/id_rsa"
+kubernetes_version    = "1.31.0"
+etcd_version          = "3.5.15"
+pod_cidr              = "10.200.0.0/16"
+service_cidr          = "10.32.0.0/24"
+cni_plugin            = "flannel"
+
+# Addons
+enable_traefik      = true
+enable_kyverno      = true
+enable_trivy        = true
+enable_karpenter    = false
+traefik_service_type = "NodePort"
+kyverno_policy_enforce = false
